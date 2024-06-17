@@ -1,0 +1,16 @@
+# ignore directories
+**/.scannerwork
+**/.phpunit.cache
+**/test
+**/public
+**/writable
+**/.dockerignore
+**/.git
+**/.gitignore
+
+# ignore files
+docker-compose.yml
+Dockerfile
+Jenkinsfile
+phpunit.xml
+sonar-project.properties
