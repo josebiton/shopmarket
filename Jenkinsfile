@@ -16,9 +16,9 @@ pipeline {
             }
         }
 
-        stage('Ejecutar php') {
+          stage('Docker Build') {
             steps {
-                sh 'php index.php'
+                sh 'docker build -t shopmarket .'
             }
         }
     }
