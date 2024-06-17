@@ -8,7 +8,7 @@ pipeline {
                 echo 'Pulled from github successfully'
             }
         }
-        
+
         stage('Instalar Composer') {
             steps {
                 sh '''
@@ -24,7 +24,7 @@ pipeline {
                 php composer-setup.php --quiet
                 RESULT=$?
                 rm composer-setup.php
-                mv composer.phar /usr/local/bin/composer
+                mv composer.phar composer
                 exit $RESULT
                 '''
             }
@@ -32,7 +32,7 @@ pipeline {
 
         stage('Instalar dependencias') {
             steps {
-                sh 'composer install'
+                sh 'php composer install'
             }
         }
 
@@ -62,4 +62,5 @@ pipeline {
         // }
     }
 }
+
 
