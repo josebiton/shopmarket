@@ -1,0 +1,7 @@
+services:
+   appphp:
+    image: shopmarket
+    container_name: shopmarket_v1
+    #restart: always
+    ports:
+      - 80:80
