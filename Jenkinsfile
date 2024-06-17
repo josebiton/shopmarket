@@ -9,6 +9,15 @@ pipeline {
             }
         }
 
+        stage('Instalar extensión dom para PHP') {
+            steps {
+                sh '''
+                sudo apt-get update
+                sudo apt-get install -y php-dom
+                '''
+            }
+        }
+
         stage('Instalar Composer') {
             steps {
                 sh '''
@@ -62,5 +71,6 @@ pipeline {
         // }
     }
 }
+
 
 
