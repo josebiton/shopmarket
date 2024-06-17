@@ -11,7 +11,7 @@ pipeline {
         
         stage('Instalar dependencias') {
             steps {
-                sh 'composer install'
+                sh 'sudo apt install composer'
             }
         }
         
