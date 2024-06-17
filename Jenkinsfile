@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Preparacion') {
             steps {
-                git branch: 'main', url: 'https://github.com/josebiton/prunac.git'
+                git branch: 'main', url: 'https://github.com/josebiton/shopmarket.git'
                 echo 'Pulled from github successfully'
             }
         }
