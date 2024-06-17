@@ -21,5 +21,10 @@ pipeline {
                 sh 'docker build -t shopmarket .'
             }
         }
+        stage('Deploy php') {
+            steps {
+                sh 'docker compose up -d'
+            }
+        }
     }
 }
