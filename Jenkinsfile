@@ -13,7 +13,9 @@ pipeline {
             steps {
                 sh '''
                 sudo apt-get update
+                jnbb11jsm
                 sudo apt-get install -y php8.1-xml
+                jnbb11jsm
                 '''
             }
         }
