@@ -13,7 +13,7 @@ pipeline {
             steps {
                 sh '''
                 sudo apt-get update
-                sudo apt-get install -y php-dom
+                sudo apt-get install -y php8.1-xml
                 '''
             }
         }
@@ -57,14 +57,13 @@ pipeline {
             }
         }
 
-        // Revisa la calidad de código con SonarQube
-        // stage ('Sonarqube') {
+        // Stage para ejecutar SonarQube (comentado por ahora)
+        // stage('SonarQube') {
         //     steps {
         //         script {
-        //             def scannerHome = tool name: 'sonarscanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation';
-        //             echo "scannerHome = $scannerHome ...."
-        //             withSonarQubeEnv() {
-        //                 sh "$scannerHome/bin/sonar-scanner"
+        //             def scannerHome = tool name: 'sonarscanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
+        //             withSonarQubeEnv('SonarQube') {
+        //                 sh "${scannerHome}/bin/sonar-scanner"
         //             }
         //         }
         //     }
